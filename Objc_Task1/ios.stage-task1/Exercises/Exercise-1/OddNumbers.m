@@ -13,15 +13,14 @@
 - (NSInteger)oddNumbers:(NSArray <NSNumber *> *)array {
     int numbers = 0;
 
-        for (NSNumber *key in array) {
+    for (NSNumber *key in array) {
+        int object = [key intValue];
 
-            int object = [key intValue];
-
-            if ( object % 2 != 0 ) {
-                numbers++;
-            }
+        if ( object % 2 != 0 ) {
+            numbers++;
         }
-        return numbers;
+    }
+    return numbers;
 }
 
 @end
