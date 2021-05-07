@@ -23,7 +23,7 @@
 }
 
 - (void)test2 {
-    NSNumber *number = @8591824;
+    NSNumber *number = @-8591824;
     NSArray *resultArray = @[@"4",@"2",@"8",@"1",@"9",@"5",@"8"];
     XCTAssertEqualObjects([self.converter numberConverter: number], resultArray);
 }
