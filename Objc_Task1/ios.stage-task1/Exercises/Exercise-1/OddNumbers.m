@@ -21,7 +21,6 @@
                 numbers++;
             }
         }
-
         return numbers;
 }
 
