@@ -3,21 +3,21 @@
 @implementation NumberConverter
 
 - (NSArray *)numberConverter:(NSNumber *)number {
-    int i = [number intValue];
+    int intNumber = [number intValue];
 
-    if (i < 0) {
-        i = -i;
+    if (intNumber < 0) {
+        intNumber = -intNumber;
     }
 
-    NSMutableArray *myArray = [NSMutableArray new];
+    NSMutableArray *resultArray = [NSMutableArray new];
 
-    while (i > 0) {
-        int n = i % 10;
-        NSString *strValue = [@(n) stringValue];
-        [myArray addObject:strValue];
-        i = i / 10;
+    while (intNumber > 0) {
+        int intLastSymbol = intNumber % 10;
+        NSString *strValue = [@(intLastSymbol) stringValue];
+        [resultArray addObject:strValue];
+        intNumber = intNumber / 10;
     }
-    return myArray;
+    return resultArray;
 }
 
 @end
